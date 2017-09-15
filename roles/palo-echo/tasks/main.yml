@@ -1,0 +1,4 @@
+---
+# tasks file for echo
+- name: echo test
+  command: echo works
