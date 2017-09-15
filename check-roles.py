@@ -33,3 +33,5 @@ target.close()
 
 run_playbook = 'ansible-playbook playbook-test.yml --syntax-check'
 subprocess.call(run_playbook, shell=True)
+
+# have nice day!
