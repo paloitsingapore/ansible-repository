@@ -1,0 +1,6 @@
+pipeline:
+  test:
+    image: ansible/ansible:centos7
+    commands:
+      - pip install ansible
+      - python check-roles.py
