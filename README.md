@@ -1,3 +1,6 @@
+
+[![Build Status](http://asia-palo-it.com:8111/api/badges/paloitsingapore/ansible-repository/status.svg)](http://asia-palo-it.com:8111/paloitsingapore/ansible-repository)
+
 # ansible-repository
 Repository containing all roles that can be reused through requirements.yml from any playbook
 
