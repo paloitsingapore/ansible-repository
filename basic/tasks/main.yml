@@ -1,18 +1,12 @@
 ---
 - name: Wait for all servers to start
-  hosts: all
-  gather_facts: false
-  tasks:
-    - local_action:
-        module: wait_for
+  local_action:
+    module: wait_for
             host={{ inventory_hostname }}
             port=22
             delay=1
             timeout=300
 
 - name: Install python 
-  hosts: all
-  gather_facts: false
-  become: true
-  tasks:
-    - raw: test -e /usr/bin/python || (apt install -y python-minimal)
+  raw: test -e /usr/bin/python || (apt install -y python-minimal)
+
