@@ -7,6 +7,9 @@
             delay=1
             timeout=300
 
+- name: Wait a while
+  local_action: command sleep 20
+
 - name: Install python 
   raw: test -e /usr/bin/python || (apt install -y python-minimal)
 
