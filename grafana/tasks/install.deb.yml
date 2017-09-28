@@ -1,0 +1,17 @@
+---
+
+- name: grafana-install | Add debian repository pt. 1
+  apt_key: url='{{grafana_apt_key}}' id=D59097AB
+
+- name: grafana-install | Add debian repository pt. 2
+  apt_repository: repo='{{grafana_apt_repository}}'
+
+- set_fact: grafana_release='grafana={{grafana_version}}'
+
+- name: grafana-install-prerequisites | Install Prerequisites
+  apt: name="apt-transport-https"
+
+- name: grafana-install | Install Grafana
+  apt: name="{{grafana_release}}" update_cache=true
+  notify:
+    - grafana restart
