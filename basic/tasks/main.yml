@@ -9,6 +9,9 @@
 
 - name: Wait a while
   local_action: command sleep 20
+  
+- name: Update apt-get
+  raw: apt-get update
 
 - name: Install python 
   raw: test -e /usr/bin/python || (apt install -y python-minimal)
